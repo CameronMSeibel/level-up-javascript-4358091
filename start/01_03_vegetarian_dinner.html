@@ -34,7 +34,15 @@
       }
     ]
     // Write your code here
+    let veggieMenu = menu.filter((menuItem) => {
+      return menuItem.isVegetarian;
+    });
 
+    let menuElement = document.getElementById("menu");
+
+    for(let menuItem of veggieMenu) {
+      menuElement.innerHTML += `<li>${menuItem.name}</li>`;
+    }
   </script>
 </body>
 
