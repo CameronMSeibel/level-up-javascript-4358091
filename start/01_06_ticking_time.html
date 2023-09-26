@@ -16,7 +16,11 @@
 
   <script>
     // Write your code here
-    
+    const clockElement = document.getElementById("clock");
+    setInterval(() => {
+      let now = new Date();
+      clockElement.innerText = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds() < 10 ? `0${now.getSeconds()}` : now.getSeconds()}`;
+    }, 1000);
   </script>
 </body>
 
