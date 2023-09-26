@@ -16,7 +16,17 @@
 
   <script>
     // Write your code here
-
+    const menu = document.getElementById("combined-menu");
+    let vendorsMenu = ["crab", "crab", "lobster", "crab", "halibut", "lobster"];
+    let totalMenu = new Set();
+    for(let item of vendorsMenu) {
+      totalMenu.add(item);
+    }
+    for(let item of totalMenu) {
+      let itemEle = document.createElement("li");
+      itemEle.innerText = item;
+      menu.append(itemEle);
+    }
   </script>
 </body>
 
