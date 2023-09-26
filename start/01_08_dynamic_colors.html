@@ -18,7 +18,12 @@
 
   <script>
     // Write your code here
-
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+    document.getElementById("blue").addEventListener("click", () => {changeColor("blue")});
+    document.getElementById("pink").addEventListener("click", () => {changeColor("pink")});
+    document.getElementById("green").addEventListener("click", () => {changeColor("green")});
   </script>
 </body>
 
