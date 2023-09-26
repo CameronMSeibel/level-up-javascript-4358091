@@ -31,3 +31,17 @@ class Book {
 }
 
 // Write your code here
+class TechnicalBook extends Book {
+  constructor(title, author, isbn, numCopies, edition) {
+    super(title, author, isbn, numCopies);
+    this.edition = edition;
+  }
+
+  getEdition() {
+    return `This book's current edition is ${this.edition}`;
+  }
+}
+
+let playerHandbook = new TechnicalBook("D&D Player Handbook", "Wizards of the Coast", 12345, 420, 5);
+
+console.log(playerHandbook.getEdition());
