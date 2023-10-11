@@ -16,7 +16,21 @@
 
   <script>
     // Write your code here
+    function* trainStops() {
+      yield "Poughkeepsie";
+      yield "Newburgh";
+      yield "Peeksill";
+      yield "Yonkers";
+      yield "Bronx";
+      yield "Grand Central";
+    }
+    
+    const stops = trainStops();
 
+    document.getElementById("next-stop").addEventListener("click", () => {
+      let stop = stops.next();
+      console.log(stop.done ? "We made it!" : stop.value);
+    });
   </script>
 </body>
 
